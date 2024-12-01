@@ -1,0 +1,160 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+header {
+    background: url('images/Brooklyn\ Bridge\ img.jpg ') no-repeat center center/cover;
+    color: #fff;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+header p {
+    font-size: 1.2em;
+}
+section {
+    padding: 20px;
+}
+.featured-bridges {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.bridge-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.bridge-card img {
+    width: 100%;
+    height: auto;
+}
+.bridge-card h3 {
+    margin: 10px;
+    font-size: 1.5em;
+}
+.bridge-card p {
+    margin: 10px;
+}
+.bridge-card:hover{
+  transform: translateY(-10px); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+/* nav hover */   
+.nav {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+padding: 15px 120px;
+background: transparent;
+z-index: 100;
+}
+.nav,
+.nav .nav-links {
+display: flex;
+align-items: center;
+font-size: small;
+}
+.nav {
+justify-content: space-between;
+}
+
+a {
+color: #f3961c;
+text-decoration: none;
+z-index: 100
+}
+.nav .logo {
+font-size: 22px;
+font-weight: 500;
+}
+.nav .nav-links {
+column-gap: 20px;
+list-style: none;
+}
+.nav .nav-links a {
+transition: all 0.2s linear;
+}
+.nav.openSearch .nav-links a {
+opacity: 0;
+pointer-events: none;
+}
+.nav .search-icon {
+color:#f3961c;
+font-size: 20px;
+cursor: pointer;
+}
+.nav .search-box {
+position: absolute;
+right: 250px;
+height: 45px;
+max-width: 555px;
+width: 100%;
+opacity: 0;
+pointer-events: none;
+transition: all 0.2s linear;
+}
+.nav.openSearch .search-box {
+opacity: 1;
+pointer-events: auto;
+}
+.search-box .search-icon {
+position: absolute;
+left: 15px;
+top: 50%;
+left: 15px;
+color: #f3961c;
+transform: translateY(-50%);
+}
+.search-box input {
+height: 100%;
+width: 100%;
+border: none;
+outline: none;
+border-radius: 6px;
+background-color: #fff;
+padding: 0 15px 0 45px;
+}
+
+.nav .navOpenBtn,
+.nav .navCloseBtn {
+display: none;
+}
+
+
+
+
+
+:where(section, footer) .section-content {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: var(--site-max-width);
+  }
+  
+  section .section-title {
+    text-align: center;
+    padding: 60px 0 100px;
+    text-transform: uppercase;
+    font-size: var(--font-size-xl);
+  }
+  
+  section .section-title::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    background: var(--secondary-color);
+    border-radius: var(--border-radius-s);
+  }
